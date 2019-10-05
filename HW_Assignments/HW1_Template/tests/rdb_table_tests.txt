@@ -1,0 +1,651 @@
+## TEST 0:
+# Test case to validate the initialization, get_row_count, get_connection, str and run_q functions
+# The below calls the constructor, which opens a connection to database and runs a query on count to get the total number of records
+# and prints 10 sample records. The output below shows all of thea above functions are working fine.
+# Please note we have enforced the primary key constraints in the database and loaded the data.
+
+******************** test_load good ********************
+RDB table =  RDBDataTable:"People"[
+  "playerID"
+]
+Number of rows = 19617
+First 10 rows =
+    playerID birthYear birthMonth  ...   finalGame   retroID    bbrefID
+0  aardsda01      1981         12  ...  2015-08-23  aardd001  aardsda01
+1  aaronha01      1934          2  ...  1976-10-03  aaroh101  aaronha01
+2  aaronto01      1939          8  ...  1971-09-26  aarot101  aaronto01
+3   aasedo01      1954          9  ...  1990-10-03  aased001   aasedo01
+4   abadan01      1972          8  ...  2006-04-13  abada001   abadan01
+5   abadfe01      1985         12  ...  2017-10-01  abadf001   abadfe01
+6  abadijo01      1850         11  ...  1875-06-10  abadj101  abadijo01
+7  abbated01      1877          4  ...  1910-09-15  abbae101  abbated01
+8  abbeybe01      1869         11  ...  1896-09-23  abbeb101  abbeybe01
+9  abbeych01      1866         10  ...  1897-08-19  abbec101  abbeych01
+
+[10 rows x 24 columns]
+
+This is the correct answer
+******************** end test_load_good ********************
+
+
+## TEST1: Test Case to validate find_my_template
+
+******************** test_find_by_template  ********************
+Template: {
+  "birthCity": "Philadelphia",
+  "deathCity": "Philadelphia",
+  "nameFirst": "Charlie"
+}
+Desired fields: ['playerID', 'nameFirst', 'nameLast', 'throws', 'deathYear', 'deathMonth']
+RDB Table Test1 (Find By Template ): Result =  [
+  {
+    "playerID": "barbech01",
+    "nameFirst": "Charlie",
+    "nameLast": "Barber",
+    "throws": "R",
+    "deathYear": "1910",
+    "deathMonth": "11"
+  },
+  {
+    "playerID": "bastich01",
+    "nameFirst": "Charlie",
+    "nameLast": "Bastian",
+    "throws": "R",
+    "deathYear": "1943",
+    "deathMonth": "11"
+  },
+  {
+    "playerID": "heardch01",
+    "nameFirst": "Charlie",
+    "nameLast": "Heard",
+    "throws": "R",
+    "deathYear": "1945",
+    "deathMonth": "2"
+  },
+  {
+    "playerID": "hilsech01",
+    "nameFirst": "Charlie",
+    "nameLast": "Hilsey",
+    "throws": "",
+    "deathYear": "1918",
+    "deathMonth": "10"
+  },
+  {
+    "playerID": "housech02",
+    "nameFirst": "Charlie",
+    "nameLast": "Householder",
+    "throws": "L",
+    "deathYear": "1913",
+    "deathMonth": "9"
+  },
+  {
+    "playerID": "nycech01",
+    "nameFirst": "Charlie",
+    "nameLast": "Nyce",
+    "throws": "",
+    "deathYear": "1908",
+    "deathMonth": "5"
+  }
+]
+Total Records: 6
+
+This is the correct answer
+******************** end test_find_by_template ********************
+
+
+# TEST1b: Test Case to validate find_my_template with invalid columns in the template; check to see if the exception is raised
+
+******************** test_find_by_template; Invalid Keys  ********************
+Template: {
+  "birthCity1": "Philadelphia",
+  "deathCity": "Philadelphia",
+  "nameFirst": "Charlie"
+}
+Desired fields: ['playerID', 'nameFirst', 'nameLast', 'throws', 'deathYear', 'deathMonth']
+RDB Test1b: Exception in load data =  (1054, "Unknown column 'birthCity1' in 'where clause'")
+
+This is the correct answer
+******************** end test_find_by_template; Invalid keys ********************
+
+
+# TEST 1c: Test Case to validate find_my_template; Desired fields not mentioned so it should all available columns
+
+******************** test_find_by_template; no desired fields  ********************
+Template: {
+  "birthCity": "Philadelphia",
+  "deathCity": "Philadelphia",
+  "nameFirst": "Charlie"
+}
+RDB Table Test1c (Find By Template ): Result =  [
+  {
+    "playerID": "barbech01",
+    "birthYear": "1854",
+    "birthMonth": "",
+    "birthDay": "",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1910",
+    "deathMonth": "11",
+    "deathDay": "23",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Barber",
+    "nameGiven": "Charles D.",
+    "weight": "148",
+    "height": "70",
+    "bats": "R",
+    "throws": "R",
+    "debut": "1884-04-17",
+    "finalGame": "1884-08-10",
+    "retroID": "barbc101",
+    "bbrefID": "barbech01"
+  },
+  {
+    "playerID": "bastich01",
+    "birthYear": "1858",
+    "birthMonth": "3",
+    "birthDay": "2",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1943",
+    "deathMonth": "11",
+    "deathDay": "10",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Bastian",
+    "nameGiven": "Charles A.",
+    "weight": "145",
+    "height": "66",
+    "bats": "R",
+    "throws": "R",
+    "debut": "1884-08-18",
+    "finalGame": "1891-08-22",
+    "retroID": "bastc101",
+    "bbrefID": "bastich01"
+  },
+  {
+    "playerID": "heardch01",
+    "birthYear": "1872",
+    "birthMonth": "1",
+    "birthDay": "30",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1945",
+    "deathMonth": "2",
+    "deathDay": "20",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Heard",
+    "nameGiven": "Charles",
+    "weight": "190",
+    "height": "74",
+    "bats": "R",
+    "throws": "R",
+    "debut": "1890-07-14",
+    "finalGame": "1890-08-30",
+    "retroID": "hearc101",
+    "bbrefID": "heardch01"
+  },
+  {
+    "playerID": "hilsech01",
+    "birthYear": "1864",
+    "birthMonth": "3",
+    "birthDay": "23",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1918",
+    "deathMonth": "10",
+    "deathDay": "31",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Hilsey",
+    "nameGiven": "Charles T.",
+    "weight": "180",
+    "height": "67",
+    "bats": "",
+    "throws": "",
+    "debut": "1883-09-27",
+    "finalGame": "1884-06-16",
+    "retroID": "hilsc101",
+    "bbrefID": "hilsech01"
+  },
+  {
+    "playerID": "housech02",
+    "birthYear": "1854",
+    "birthMonth": "2",
+    "birthDay": "8",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1913",
+    "deathMonth": "9",
+    "deathDay": "3",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Householder",
+    "nameGiven": "Charles W.",
+    "weight": "158",
+    "height": "71",
+    "bats": "L",
+    "throws": "L",
+    "debut": "1882-05-02",
+    "finalGame": "1884-10-15",
+    "retroID": "housc102",
+    "bbrefID": "housech02"
+  },
+  {
+    "playerID": "nycech01",
+    "birthYear": "1870",
+    "birthMonth": "7",
+    "birthDay": "1",
+    "birthCountry": "USA",
+    "birthState": "PA",
+    "birthCity": "Philadelphia",
+    "deathYear": "1908",
+    "deathMonth": "5",
+    "deathDay": "9",
+    "deathCountry": "USA",
+    "deathState": "PA",
+    "deathCity": "Philadelphia",
+    "nameFirst": "Charlie",
+    "nameLast": "Nyce",
+    "nameGiven": "Charles Reiff",
+    "weight": "160",
+    "height": "68",
+    "bats": "",
+    "throws": "",
+    "debut": "1895-05-28",
+    "finalGame": "1895-08-28",
+    "retroID": "nycec101",
+    "bbrefID": "nycech01"
+  }
+]
+Total Records: 6
+
+This is the correct answer
+******************** end test_find_by_template; no desired fields ********************
+
+
+
+
+## TEST 2 : Test Case to validate the data with primary key values; the return fields not mentioned so it should return everything
+
+******************** test_find_by_primary_key; no desired fields  ********************
+Table Name - batting
+key fields: ['aardsda01', 'SEA', '2010', '1']
+RDB Table Test2 (Find By Primary Key - not mentioning the return columns): Result =  [
+  {
+    "playerID": "aardsda01",
+    "yearID": "2010",
+    "stint": "1",
+    "teamID": "SEA",
+    "lgID": "AL",
+    "G": "53",
+    "AB": "0",
+    "R": "0",
+    "H": "0",
+    "2B": "0",
+    "3B": "0",
+    "HR": "0",
+    "RBI": "0",
+    "SB": "0",
+    "CS": "0",
+    "BB": "0",
+    "SO": "0",
+    "IBB": "0",
+    "HBP": "0",
+    "SH": "0",
+    "SF": "0",
+    "GIDP": "0"
+  }
+]
+
+This is the correct answer
+******************** end test_find_by_template; no desired fields ********************
+
+
+## TEST 2b : Test Case to validate the data with primary key values; the return fields mentioned
+
+******************** test_find_by_template; with desired fields  ********************
+Table Name - batting
+key fields: ['aardsda01', 'SEA', '2010', '1']
+Desired fields: ['playerID', 'yearID', 'stint', 'teamID']
+RDB Table Test2b (Find By Primary Key -  with the return columns): Result =  [
+  {
+    "playerID": "aardsda01",
+    "yearID": "2010",
+    "stint": "1",
+    "teamID": "SEA"
+  }
+]
+
+This is the correct answer
+******************** end test_find_by_template; with desired fields ********************
+
+
+## TEST 3: Test Case to validate Inserts when the primary key doesn't exist in the table
+
+******************** test_insert  ********************
+Table Name - appearances
+no of rows before insert: 105789
+RDB Test3 (Insert): Result from find_my_template =  [
+  {
+    "yearID": "2019",
+    "teamID": "SEA",
+    "lgID": null,
+    "playerID": "aardsda01",
+    "G_all": "45",
+    "GS": null,
+    "G_batting": "3",
+    "G_defense": "45",
+    "G_p": "45",
+    "G_c": null,
+    "G_1b": null,
+    "G_2b": null,
+    "G_3b": null,
+    "G_ss": null,
+    "G_lf": null,
+    "G_cf": null,
+    "G_rf": null,
+    "G_of": null,
+    "G_dh": null,
+    "G_ph": null,
+    "G_pr": null
+  }
+]
+RDB Test3 (Insert): Result from find_my_template=  [
+  {
+    "yearID": "2001",
+    "teamID": "SEA",
+    "lgID": null,
+    "playerID": "aardsda01",
+    "G_all": "32",
+    "GS": null,
+    "G_batting": "7",
+    "G_defense": "32",
+    "G_p": "32",
+    "G_c": null,
+    "G_1b": null,
+    "G_2b": null,
+    "G_3b": null,
+    "G_ss": null,
+    "G_lf": null,
+    "G_cf": null,
+    "G_rf": null,
+    "G_of": null,
+    "G_dh": null,
+    "G_ph": null,
+    "G_pr": null
+  }
+]
+RDB Test3 (Insert): Result from find_my_template=  [
+  {
+    "yearID": "2002",
+    "teamID": "SEA",
+    "lgID": null,
+    "playerID": "aardsda01",
+    "G_all": "30",
+    "GS": null,
+    "G_batting": "9",
+    "G_defense": "30",
+    "G_p": "30",
+    "G_c": null,
+    "G_1b": null,
+    "G_2b": null,
+    "G_3b": null,
+    "G_ss": null,
+    "G_lf": null,
+    "G_cf": null,
+    "G_rf": null,
+    "G_of": null,
+    "G_dh": null,
+    "G_ph": null,
+    "G_pr": null
+  }
+]
+RDB Test3 (Insert): Result from find_my_template=  [
+  {
+    "yearID": "2003",
+    "teamID": "SEA",
+    "lgID": null,
+    "playerID": "aardsda01",
+    "G_all": "30",
+    "GS": null,
+    "G_batting": "9",
+    "G_defense": "30",
+    "G_p": "30",
+    "G_c": null,
+    "G_1b": null,
+    "G_2b": null,
+    "G_3b": null,
+    "G_ss": null,
+    "G_lf": null,
+    "G_cf": null,
+    "G_rf": null,
+    "G_of": null,
+    "G_dh": null,
+    "G_ph": null,
+    "G_pr": null
+  }
+]
+no of rows after insert: 105793
+no of rows Inserted successfully: 4
+
+This is the correct answer
+******************** end test_insert ********************
+
+
+
+# TEST 3b: Test Case to validate Inserts when the primary key already exists; Should throw an exception
+
+******************** test_insert; PK already exists  ********************
+Table Name - appearances
+no of rows before insert: 105793
+RDB Test3b: Exception in Insert  =  (1062, "Duplicate entry '2019-SEA-aardsda01' for key 'PRIMARY'")
+
+This is the correct answer
+********************  end test_insert; PK already exists  ********************
+
+
+# TEST 4: Test Case to validate Delete by template
+
+******************** test_delete_by_template  ********************
+Table Name - appearances
+Template: {
+  "playerID": "aardsda01",
+  "G_all": "45",
+  "G_batting": "3"
+}
+CSV Table Test4; Records Deleted :  1
+CSV Table Test4: Successfull = Records not found by template after delete
+
+This is the correct answer
+******************** end test_delete_by_template  ********************
+
+
+# TEST 5: Test Case to validate Delete by key fields
+
+******************** test_delete_by_key  ********************
+Table Name - appearances
+Key Fields: ['aardsda01', 'SEA', '2001']
+CSV Table Test5; Records Deleted :  1
+CSV Table Test5: Successfull = Records not found by template after delete
+
+This is the correct answer
+******************** end test_delete_by_key  ********************
+
+
+
+# TEST 6: Test Case to validate update by template
+
+******************** test_update_by_template  ********************
+Table Name - appearances
+Template: {
+  "playerID": "aardsda01",
+  "G_all": "30"
+}
+New Values: {
+  "G_batting": "90",
+  "G_defense": "100",
+  "G_p": "100"
+}
+Expected no. of records to update: 2
+RDB Test6 (Records before udpate_by_template =  [
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2002",
+    "G_all": "30",
+    "G_batting": "9",
+    "G_defense": "30",
+    "G_p": "30"
+  },
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2003",
+    "G_all": "30",
+    "G_batting": "9",
+    "G_defense": "30",
+    "G_p": "30"
+  }
+]
+No. of records udpated: 2
+RDB Test6 (Records after udpate_by_template =  [
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2002",
+    "G_all": "30",
+    "G_batting": "90",
+    "G_defense": "100",
+    "G_p": "100"
+  },
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2003",
+    "G_all": "30",
+    "G_batting": "90",
+    "G_defense": "100",
+    "G_p": "100"
+  }
+]
+
+This is the correct answer
+******************** end test_update_by_template  ********************
+
+
+## TEST 6b: Test Case to validate update by template when new values match with existing PK; Should raise an exception
+
+********************  test_update_by_template; PK already exists  ********************
+Table Name - appearances
+Template: {
+  "playerID": "aardsda01",
+  "teamID": "SEA",
+  "yearID": "2002",
+  "G_all": "30"
+}
+New Values: {
+  "G_c": "28",
+  "yearID": "2003"
+}
+RDB Test6b: Exception in update_by_template =  (1062, "Duplicate entry '2003-SEA-aardsda01' for key 'PRIMARY'")
+
+This is the correct answer
+******************** end test_update_by_template; PK already exists  ********************
+
+
+## TEST 7: Test Case to validate update by primary key
+
+******************** test_update_by_key  ********************
+Table Name - appearances
+Keys: ['aardsda01', 'SEA', '2003']
+New Values: {
+  "G_batting": "30",
+  "G_defense": "240",
+  "G_p": "30"
+}
+Expected no. of records to update: 1
+CSV Test7 (Records before udpate_by_key =  [
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2003",
+    "G_all": "30",
+    "G_batting": "90",
+    "G_defense": "100",
+    "G_p": "100"
+  }
+]
+No. of records udpated: 1
+CSV Test7 (Records after udpate_by_key =  [
+  {
+    "playerID": "aardsda01",
+    "teamID": "SEA",
+    "yearID": "2003",
+    "G_all": "30",
+    "G_batting": "30",
+    "G_defense": "240",
+    "G_p": "30"
+  }
+]
+
+This is the correct answer
+******************** end test_update_by_key  ********************
+
+
+# TEST7b: Test Case to validate update by primary key to an existing another record key; should raise an exception
+
+********************  test_update_by_key; PK already exists  ********************
+Table Name - appearances
+Keys: ['aardsda01', 'SEA', '2002']
+New Values: {
+  "G_all": "240",
+  "yearID": "2003",
+  "teamID": "SEA",
+  "G_batting": "30",
+  "G_defense": "240",
+  "G_p": "30"
+}
+Expected no. of records to update: 1
+RDB Test7b: Exception in update_by_key =  (1062, "Duplicate entry '2003-SEA-aardsda01' for key 'PRIMARY'")
+
+This is the correct answer
+******************** end test_update_by_key; PK already exists  ********************
+
+
+# TEST 8: Test the get_rows function; optional
+
+********************  test_get_rows; optional  ********************
+Table Name - appearances
+RDB Test8 - Rows read: 105791
+
+This is the correct answer
+******************** end test_get_rows  ********************
+
+
+
+# TEST 9: deleted additional records to cleanup the dataset for next run; optional
+
+********************  Delete the extra records inserted for this test; cleanup  ********************
+Table Name - appearances
+Record deleted by key: ['aardsda01', 'SEA', '2002']
+Record deleted by key: ['aardsda01', 'SEA', '2003']
+***************  Delete the extra records inserted for this test; cleanup  *****************
+
+
