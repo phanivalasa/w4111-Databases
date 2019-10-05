@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5e93ea-ead3-4609-b174-98a8e3015eaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Lectures/Lecture_2/w4111-L2-s2019-ModelRelational-V2.2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lectures/Lecture_2/w4111-L2-s2019-ModelRelational-V2.2.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lectures/Lecture_2/w4111-L2-s2019-ModelRelational-V2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lectures/Lecture_2/w4111-L2-s2019-ModelRelational-V2.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +29,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -141,7 +140,7 @@
       <updated>1567553221415</updated>
       <workItem from="1567942402543" duration="1045000" />
       <workItem from="1568758804799" duration="1660000" />
-      <workItem from="1568760824392" duration="91711000" />
+      <workItem from="1568760824392" duration="92323000" />
     </task>
     <servers />
   </component>
