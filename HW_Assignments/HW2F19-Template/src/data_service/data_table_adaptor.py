@@ -43,7 +43,7 @@ def get_rdb_table(table_name, db_name, key_columns=None, connect_info=None):
 # YOU HAVE TO IMPLEMENT THE FUNCTIONS BELOW.
 #
 #
-# -- TO IMPLEMENT --
+# IMPLEMENTATION
 #########################################
 
 def get_databases():
@@ -51,16 +51,95 @@ def get_databases():
 
     :return: A list of databases/schema at this endpoint.
     """
+    db = 'information_schema'
+    table = 'tables'
+    rdb_obj = get_rdb_table(table, db)
 
-    # -- TO IMPLEMENT --
-    pass
+    q = "select distinct table_schema from " + rdb_obj._full_table_name
+
+    res, data = dbutils.run_q(sql=q, args=None, conn=rdb_obj._cnx, commit=True, fetch=True)
+
+    if data is not None and len(data) > 0:
+        data_list = []
+        for i in range(len(data)):
+            data_list.append(data[i]['TABLE_SCHEMA'])
+    else:
+        data_list = None
+
+    return data_list
+
+def get_table_names(dbname):
+    """
+    :return: list of table names in the schema
+    """
+    db = 'information_schema'
+    table = 'tables'
+    rdb_obj = get_rdb_table(table, db)
+
+    q = "select distinct table_name from " + rdb_obj._full_table_name
+    q += " where table_type = 'BASE TABLE' and table_schema = '" + dbname + "'"
+
+    res, data = dbutils.run_q(sql=q, args=None, conn=rdb_obj._cnx, commit=True, fetch=True)
+
+    if data is not None and len(data) > 0:
+        data_list = []
+        for i in range(len(data)):
+            data_list.append(data[i]['TABLE_NAME'])
+    else:
+        data_list = None
+
+    return data_list
 
 
+def get_by_primary_key(table_name, dbname, pk_values, fields=None):
+    """
+    :return: ouput of the query by primary key values.
+    """
+    rdb_obj = get_rdb_table(table_name, dbname)
+    output = rdb_obj.find_by_primary_key(pk_values, fields)
+    # print('db service out:', output)
+    return output
 
+def delete_by_primary_key(table_name, dbname, pk_values):
+    """
+    :return: ouput of the query by primary key values; number of rows deleted.
+    """
+    rdb_obj = get_rdb_table(table_name, dbname)
+    output = rdb_obj.delete_by_key(pk_values)
 
+    return output
 
+def update_by_primary_key(table_name,dbname,pk_values,new_values):
+    """
+    pk_values: values of primary key fileds provided in an order.
+    new_values: dictionary of what the new values should. this is given in the body of api call.
+    :return: ouput of the query by primary key values; number of rows updated
+    """
+    rdb_obj = get_rdb_table(table_name, dbname)
+    output = rdb_obj.update_by_key(pk_values, new_values)
 
+    return output
 
+def get_by_template(table_name,dbname,query_param,fields,limit=None,offset=None):
+    """
+    query_param: template to find records.
+    fileds: fields to return
+    :return: ouput of the query by primary key values; number of rows updated
+    """
+    rdb_obj = get_rdb_table(table_name, dbname)
+    output = rdb_obj.find_by_template(query_param, fields, limit=limit, offset=offset)
+
+    return output
+
+def insert_record(table_name, dbname, new_record):
+    """
+    new record: fields to insert
+    :return: output of the insert result
+    """
+    rdb_obj = get_rdb_table(table_name, dbname)
+    output = rdb_obj.insert(new_record)
+
+    return output
 
 
 

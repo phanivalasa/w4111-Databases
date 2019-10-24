@@ -132,6 +132,10 @@ def create_select(table_name, template, fields=None, order_by=None, limit=None, 
 
     if is_select:
         sql = "select " + field_list + " from " +  table_name + " " + w_clause
+        if limit:
+            sql += " limit " + str(limit)
+        if offset:
+            sql += " offset " + str(offset)
     else:
         sql = "delete from " + table_name + " " + w_clause
 

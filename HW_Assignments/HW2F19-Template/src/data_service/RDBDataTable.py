@@ -41,7 +41,7 @@ class RDBDataTable():
     # NOTE: You may just use the default connector if you want.
     _default_connect_info = {
         'host': 'localhost',
-        'user': 'root',
+        'user': 'dbuser',
         'password': 'dbuserdbuser',
         'db': 'lahman2019clean',
         'port': 3306
@@ -126,7 +126,13 @@ class RDBDataTable():
         :return: Returns the count of the number of rows in the table.
         """
 
-        # -- TO IMPLEMENT --
+        # IMPLEMENTATION
+
+        q = "select count(1) count from " + self._full_table_name
+
+        res, data = dbutils.run_q(sql=q, args=None, conn=self._cnx, commit=True, fetch=True)
+        self._row_count = data[0]['count']
+        print('row count:', self._row_count)
 
     def get_primary_key_columns(self):
         """
@@ -134,10 +140,26 @@ class RDBDataTable():
         :return: A list of the primary key columns ordered by their position in the key.
         """
 
-        # -- TO IMPLEMENT --
+        # IMPLEMENTATION
 
         # Hint. Google "get primary key columns mysql"
         # Hint. THE ORDER OF THE COLUMNS IN THE KEY DEFINITION MATTERS.
+
+        q = "select group_concat(column_name order by ordinal_position) pk_cols from information_schema.key_column_usage " \
+            "where table_name = '" + self._table_name
+        q += "' and table_schema = '" + self._db_name
+        q += "' and constraint_name = 'primary' group by table_name"
+
+        res, data = dbutils.run_q(sql=q, args=None, conn=self._cnx, commit=True, fetch=True)
+        # self._key_columns = data[0]['pk_cols'].split(",")
+
+        if data is not None and len(data) > 0:
+            self._key_columns = data[0]['pk_cols'].split(",")
+        else:
+            self._key_columns = None
+
+        print('primary key:', self._key_columns )
+
 
     def get_sample_rows(self, no_of_rows=_rows_to_print):
         """
@@ -192,7 +214,7 @@ class RDBDataTable():
         result = self.find_by_template(tmp, field_list)
 
         if result is not None and len(result) > 0:
-            result = result[0]
+            result = result
         else:
             result = None
 
@@ -213,8 +235,10 @@ class RDBDataTable():
         result = None
 
         try:
-            sql, args = dbutils.create_select(self._full_table_name, template=template, fields=field_list)
+            print('template:', template)
+            sql, args = dbutils.create_select(self._full_table_name, template=template, fields=field_list, limit=limit, offset=offset)
             res, data = dbutils.run_q(sql=sql, args=args, conn=self._cnx, commit=True, fetch=True)
+
         except Exception as e:
             print("Exception e = ", e)
             raise e
