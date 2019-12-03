@@ -1,0 +1,269 @@
+/anaconda2/envs/Python37/bin/python /Users/phanivalasa/Documents/Columbia/Databases/Homeworks/EC/Bonus_Outline/tests/unit_test_csv_table.py
+Table Name : People_join_test
+Loading People_join_test.csv....
+Done loading
+Table Name : Appearances
+Loading Appearances.csv....
+Done loading
+Table Name : People
+Loading People.csv....
+Done loading
+Table Name : Batting
+Loading Batting.csv....
+Done loading
+
+
+####################################################
+Join People table with Appearances table using smart join
+####################################################
+Join Fields:  ['playerID']
+Where template: {'playerID': 'aasedo01', 'teamID': 'BAL'}
+Projected fields: ['playerID', 'nameFirst', 'nameLast', 'yearID', 'teamID', 'G_all']
+Optimization #1: Table swap to choose best access path
+Optimizer log: Tables Swapped
+Optimization #2: PushDown the Where clause
+Optimizer log: Number of rows to scan before pushdown =  5257
+Optimizer log: Number of rows to scan after pushdown =  4
+Elapsed_Time (With Optimizer) =  0.015273094177246094
+
+ No. of rows in Output :  4
+ Output rows =  [
+  {
+    "playerID": "aasedo01",
+    "yearID": "1985",
+    "teamID": "BAL",
+    "G_all": "54",
+    "nameFirst": "Don",
+    "nameLast": "Aase"
+  },
+  {
+    "playerID": "aasedo01",
+    "yearID": "1986",
+    "teamID": "BAL",
+    "G_all": "66",
+    "nameFirst": "Don",
+    "nameLast": "Aase"
+  },
+  {
+    "playerID": "aasedo01",
+    "yearID": "1987",
+    "teamID": "BAL",
+    "G_all": "7",
+    "nameFirst": "Don",
+    "nameLast": "Aase"
+  },
+  {
+    "playerID": "aasedo01",
+    "yearID": "1988",
+    "teamID": "BAL",
+    "G_all": "35",
+    "nameFirst": "Don",
+    "nameLast": "Aase"
+  }
+]
+####################################################
+
+
+####################################################
+Join  people table with Appearances table using dumb join
+####################################################
+Join Fields:  ['playerID']
+Where template: {'playerID': 'aasedo01', 'teamID': 'BAL'}
+Projected fields: ['playerID', 'nameFirst', 'nameLast', 'yearID', 'teamID', 'G_all']
+Rows in left table  People :  19370
+Rows in right table  Appearances :  5257
+Rows in joined table without where clause:  5257
+Rows in joined table after where clause applied:  4
+Elapsed_Time (Without Optimizer) =  72.67666006088257
+
+ No. of rows in Output :  4
+ Output rows =  [
+  {
+    "playerID": "aasedo01",
+    "nameFirst": "Don",
+    "nameLast": "Aase",
+    "yearID": "1985",
+    "teamID": "BAL",
+    "G_all": "54"
+  },
+  {
+    "playerID": "aasedo01",
+    "nameFirst": "Don",
+    "nameLast": "Aase",
+    "yearID": "1986",
+    "teamID": "BAL",
+    "G_all": "66"
+  },
+  {
+    "playerID": "aasedo01",
+    "nameFirst": "Don",
+    "nameLast": "Aase",
+    "yearID": "1987",
+    "teamID": "BAL",
+    "G_all": "7"
+  },
+  {
+    "playerID": "aasedo01",
+    "nameFirst": "Don",
+    "nameLast": "Aase",
+    "yearID": "1988",
+    "teamID": "BAL",
+    "G_all": "35"
+  }
+]
+
+####################################################
+Join People table with Batting table using smart join
+####################################################
+Join Fields:  ['playerID']
+Where template: {'teamID': 'BOS', 'yearID': '1960', 'throws': 'L'}
+Projected fields: ['playerID', 'nameLast', 'throws', 'teamID', 'yearID', 'AB', 'H', 'RBI']
+Optimization #1: Table swap to choose best access path
+Optimizer log: Tables Swapped
+Optimization #2: PushDown the Where clause
+Optimizer log: Number of rows to scan before pushdown =  102816
+Optimizer log: Number of rows to scan after pushdown =  42
+Elapsed_Time (With Optimizer) =  0.19380998611450195
+
+ No. of rows in Output :  6
+ Output rows =  [
+  {
+    "playerID": "borlato01",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "13",
+    "H": "0",
+    "RBI": "0",
+    "nameLast": "Borland",
+    "throws": "L"
+  },
+  {
+    "playerID": "bowsfte01",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "4",
+    "H": "1",
+    "RBI": "2",
+    "nameLast": "Bowsfield",
+    "throws": "L"
+  },
+  {
+    "playerID": "earlear01",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "1",
+    "H": "0",
+    "RBI": "0",
+    "nameLast": "Earley",
+    "throws": "L"
+  },
+  {
+    "playerID": "keougma01",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "105",
+    "H": "26",
+    "RBI": "9",
+    "nameLast": "Keough",
+    "throws": "L"
+  },
+  {
+    "playerID": "nichoch02",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "3",
+    "H": "0",
+    "RBI": "0",
+    "nameLast": "Nichols",
+    "throws": "L"
+  },
+  {
+    "playerID": "willste01",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "8",
+    "H": "2",
+    "RBI": "1",
+    "nameLast": "Wills",
+    "throws": "L"
+  }
+]
+####################################################
+
+####################################################
+Join People table with Batting table using dumb join
+####################################################
+Join Fields:  ['playerID']
+Where template: {'teamID': 'BOS', 'yearID': '1960', 'throws': 'L'}
+Projected fields: ['playerID', 'nameLast', 'throws', 'teamID', 'yearID', 'AB', 'H', 'RBI']
+Rows in left table  People :  19370
+Rows in right table  Batting :  102816
+Rows in joined table without where clause:  102815
+Rows in joined table after where clause applied:  6
+Elapsed_Time (Without Optimizer) =  1498.7952058315277
+
+ No. of rows in Output :  6
+ Output rows =  [
+  {
+    "playerID": "borlato01",
+    "nameLast": "Borland",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "13",
+    "H": "0",
+    "RBI": "0"
+  },
+  {
+    "playerID": "bowsfte01",
+    "nameLast": "Bowsfield",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "4",
+    "H": "1",
+    "RBI": "2"
+  },
+  {
+    "playerID": "earlear01",
+    "nameLast": "Earley",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "1",
+    "H": "0",
+    "RBI": "0"
+  },
+  {
+    "playerID": "keougma01",
+    "nameLast": "Keough",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "105",
+    "H": "26",
+    "RBI": "9"
+  },
+  {
+    "playerID": "nichoch02",
+    "nameLast": "Nichols",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "3",
+    "H": "0",
+    "RBI": "0"
+  },
+  {
+    "playerID": "willste01",
+    "nameLast": "Wills",
+    "throws": "L",
+    "teamID": "BOS",
+    "yearID": "1960",
+    "AB": "8",
+    "H": "2",
+    "RBI": "1"
+  }
+]
+
+Process finished with exit code 0

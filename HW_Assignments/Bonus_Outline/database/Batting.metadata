@@ -1,0 +1,128 @@
+{
+  "table_name": "Batting",
+  "file_name": "Batting.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "stint",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "lgID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "AB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "R",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "H",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "2B",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "3B",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "HR",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "RBI",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "CS",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "BB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SO",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "IBB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "HBP",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SH",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SF",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "GIDP",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID",
+        "teamID",
+        "yearID",
+        "stint"
+      ]
+    }
+  ]
+}

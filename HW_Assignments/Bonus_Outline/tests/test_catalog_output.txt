@@ -1,0 +1,2111 @@
+/anaconda2/envs/Python37/bin/python /Users/phanivalasa/Documents/Columbia/Databases/Homeworks/EC/Bonus_Outline/tests/unit_test_catalog.py
+
+Check the creation of Metadata file; Table is People;
+####################################################
+Table Name :  People
+Columns :  ['playerID', 'birthYear', 'birthMonth', 'birthDay', 'birthCountry', 'birthState', 'birthCity', 'deathYear', 'deathMonth', 'deathDay', 'deathCountry', 'deathState', 'deathCity', 'nameFirst', 'nameLast', 'nameGiven', 'weight', 'height', 'bats', 'throws', 'debut', 'finalGame', 'retroID', 'bbrefID']
+Primary Key :
+ {
+  "index_name": "PRIMARY_KEY",
+  "index_type": "PRIMARY",
+  "column_names": [
+    "playerID"
+  ]
+}
+Table Metadata from the output file :
+ {
+  "table_name": "People",
+  "file_name": "People.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+
+Check the creation of medadata file; Table is Appearances
+####################################################
+Table Name :  Appearances
+Columns :  ['yearID', 'teamID', 'lgID', 'playerID', 'G_all', 'GS', 'G_batting', 'G_defense', 'G_p', 'G_c', 'G_1b', 'G_2b', 'G_3b', 'G_ss', 'G_lf', 'G_cf', 'G_rf', 'G_of', 'G_dh', 'G_ph', 'G_pr']
+Primary Key :
+ {
+  "index_name": "PRIMARY_KEY",
+  "index_type": "PRIMARY",
+  "column_names": [
+    "playerID",
+    "teamID",
+    "yearID"
+  ]
+}
+Table Metadata from the output file :
+ {
+  "table_name": "Appearances",
+  "file_name": "Appearances.csv",
+  "columns": [
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "lgID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_all",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "GS",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_batting",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_defense",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_p",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_c",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_1b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_2b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_3b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_ss",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_lf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_cf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_rf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_of",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_dh",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_ph",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_pr",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID",
+        "teamID",
+        "yearID"
+      ]
+    }
+  ]
+}
+
+
+Check the creation of medadata file; Table is Batting
+####################################################
+Table Name :  Batting
+Columns :  ['playerID', 'yearID', 'stint', 'teamID', 'lgID', 'G', 'AB', 'R', 'H', '2B', '3B', 'HR', 'RBI', 'SB', 'CS', 'BB', 'SO', 'IBB', 'HBP', 'SH', 'SF', 'GIDP']
+Primary Key :
+ {
+  "index_name": "PRIMARY_KEY",
+  "index_type": "PRIMARY",
+  "column_names": [
+    "playerID",
+    "teamID",
+    "yearID",
+    "stint"
+  ]
+}
+Table Metadata from the output file :
+ {
+  "table_name": "Batting",
+  "file_name": "Batting.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "stint",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "lgID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "AB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "R",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "H",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "2B",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "3B",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "HR",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "RBI",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "CS",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "BB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SO",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "IBB",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "HBP",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SH",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "SF",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "GIDP",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID",
+        "teamID",
+        "yearID",
+        "stint"
+      ]
+    }
+  ]
+}
+
+
+Check the creation of medadata file; Table is People_test, this is a file with sample records of People
+####################################################
+Table Name :  People_test
+Columns :  ['playerID', 'birthYear', 'birthMonth', 'birthDay', 'birthCountry', 'birthState', 'birthCity', 'deathYear', 'deathMonth', 'deathDay', 'deathCountry', 'deathState', 'deathCity', 'nameFirst', 'nameLast', 'nameGiven', 'weight', 'height', 'bats', 'throws', 'debut', 'finalGame', 'retroID', 'bbrefID']
+Primary Key :
+ {
+  "index_name": "PRIMARY_KEY",
+  "index_type": "PRIMARY",
+  "column_names": [
+    "playerID"
+  ]
+}
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+
+get_table method - Load from the existing metadata file created above. Note that the metadata files are stored as .metadata file.
+####################################################
+Table Name :  People_test
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+
+Dropping the table when the given table do not exist; Should throw an error; Checking for People_test2 here.
+ ####################################################
+Test3 Exception:  Error dropping table; Table does not exist
+
+
+Dropping the existing table ; Try to load the table after its dropped, should give an error.
+####################################################
+Table Dropped:  People_test
+Test4 Exception:  Table metadata/catalog doesn't exist for loading
+
+
+Recreating People_test table, this is a file with sample records of People
+####################################################
+Table Name :  People_test
+Columns :  ['playerID', 'birthYear', 'birthMonth', 'birthDay', 'birthCountry', 'birthState', 'birthCity', 'deathYear', 'deathMonth', 'deathDay', 'deathCountry', 'deathState', 'deathCity', 'nameFirst', 'nameLast', 'nameGiven', 'weight', 'height', 'bats', 'throws', 'debut', 'finalGame', 'retroID', 'bbrefID']
+Primary Key :
+ {
+  "index_name": "PRIMARY_KEY",
+  "index_type": "PRIMARY",
+  "column_names": [
+    "playerID"
+  ]
+}
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+
+Dropping an existing column; Notice that birthYear is dropped
+####################################################
+Table Name :  People_test
+Table Metadata from the input file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+
+Dropping an  index; When index name do not  exist
+####################################################
+Table Name :  People_test
+Test5 Exception:  Error - Index cannot be dropped; Index name dosn't exist
+
+
+Dropping an existing index - PRIMARY_KEY
+####################################################
+Table Name :  People_test
+Table Metadata from the input file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
+
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": []
+}
+
+
+Adding primary key;
+####################################################
+Table Name :  People_test
+Table Metadata from the input file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": []
+}
+
+
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerId"
+      ]
+    }
+  ]
+}
+
+
+Adding an INDEX - NEW_INDEX;
+####################################################
+Table Name :  People_test
+Table Metadata from the input file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerId"
+      ]
+    }
+  ]
+}
+
+
+Table Metadata from the output file :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerId"
+      ]
+    },
+    {
+      "index_name": "NEW_INDEX",
+      "index_type": "INDEX",
+      "column_names": [
+        "nameFirst",
+        "nameLast"
+      ]
+    }
+  ]
+}
+
+
+Read index column names;
+####################################################
+Table Metadata :
+ {
+  "table_name": "People_test",
+  "file_name": "People_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerId"
+      ]
+    },
+    {
+      "index_name": "NEW_INDEX",
+      "index_type": "INDEX",
+      "column_names": [
+        "nameFirst",
+        "nameLast"
+      ]
+    }
+  ]
+}
+
+Column Names : ['nameFirst', 'nameLast']
+
+Process finished with exit code 0

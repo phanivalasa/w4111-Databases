@@ -1,0 +1,7 @@
+playerID,birthYear,birthMonth,birthDay,birthCountry,birthState,birthCity,deathYear,deathMonth,deathDay,deathCountry,deathState,deathCity,nameFirst,nameLast,nameGiven,weight,height,bats,throws,debut,finalGame,retroID,bbrefID
+aardsda01,1981,12,27,USA,CO,Denver,,,,,,,David,Aardsma,David Allan,215,75,R,R,4/6/04,8/23/15,aardd001,aardsda01
+adkinst01,1964,10,26,USA,IL,Chicago,,,,,,,Steve,Adkins,Steven Thomas,210,78,R,L,9/12/90,10/3/90,adkis001,adkinst01
+adriaeh01,1989,8,21,Venezuela,Miranda,Guarenas,,,,,,,Ehire,Adrianza,Ehire Enrique,170,73,B,R,9/8/13,10/1/17,adrie001,adriaeh01
+guzmasa01,1949,7,25,D.R.,San Pedro de Macoris,San Pedro de Macoris,,,,,,,Santiago,Guzman,Santiago Donovan,180,74,R,R,9/30/69,4/18/72,guzms101,guzmasa01
+wardco02,1964,1,2,USA,MI,Lansing,,,,,,,Colby,Ward,Robert Colby,185,74,R,R,7/27/90,9/27/90,wardc003,wardco02
+zychto01,1990,8,7,USA,IL,Monee,,,,,,,Tony,Zych,Anthony Aaron,190,75,R,R,9/4/15,8/19/17,zycht001,zychto01

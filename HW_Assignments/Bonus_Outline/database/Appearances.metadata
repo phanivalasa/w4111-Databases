@@ -1,0 +1,122 @@
+{
+  "table_name": "Appearances",
+  "file_name": "Appearances.csv",
+  "columns": [
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "lgID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_all",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "GS",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_batting",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_defense",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_p",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_c",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_1b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_2b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_3b",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_ss",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_lf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_cf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_rf",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_of",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_dh",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_ph",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "G_pr",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID",
+        "teamID",
+        "yearID"
+      ]
+    }
+  ]
+}

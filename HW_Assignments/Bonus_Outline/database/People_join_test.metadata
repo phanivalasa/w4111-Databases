@@ -1,0 +1,135 @@
+{
+  "table_name": "People_join_test",
+  "file_name": "People_join_test.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathYear",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathMonth",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathDay",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathState",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "deathCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "nameGiven",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "weight",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "height",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bats",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "debut",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "finalGame",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "retroID",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "bbrefID",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "PRIMARY_KEY",
+      "index_type": "PRIMARY",
+      "column_names": [
+        "playerID"
+      ]
+    }
+  ]
+}
